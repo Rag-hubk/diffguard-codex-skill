@@ -1,0 +1,19 @@
+name: Validate repository
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate shell syntax
+        run: bash -n scripts/*.sh
+      - name: Require skill metadata
+        run: |
+          test -f SKILL.md
+          head -1 SKILL.md | grep --quiet '^---$'
+          grep --quiet '^name: seo-technical-readiness$' SKILL.md

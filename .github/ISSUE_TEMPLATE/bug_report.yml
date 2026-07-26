@@ -1,0 +1,25 @@
+name: Bug report
+description: Report a reproducible problem in the skill or scripts.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What happened?
+      description: Do not include credentials, private URLs, or customer data.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include the prompt and a sanitized project context.
+    validations:
+      required: true
