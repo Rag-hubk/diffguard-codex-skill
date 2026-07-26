@@ -24,7 +24,7 @@ Security findings should be tied to a concrete data flow, source location, secur
 ## Install
 
 ```bash
-git clone https://github.com/<your-org>/trust-the-diff-appsec-codex.git \
+git clone https://github.com/Rag-hubk/diffguard-codex-skill.git \
   ~/.codex/skills/trust-the-diff-appsec-codex
 ```
 
