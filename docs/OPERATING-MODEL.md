@@ -1,27 +1,21 @@
 # Operating Model
 
-## Design Goal
-
-Technical SEO work should be reproducible engineering work. This skill uses a small evidence loop:
+Trust the Diff uses a five-step evidence loop:
 
 ```text
-Intent -> Observe -> Trace -> Change -> Verify
+Threat model -> Data-flow trace -> Safe validation -> Root-cause fix -> Regression check
 ```
 
-The loop prevents two common failures:
+The sequence matters. Scanning first without business context creates false positives; patching before validation can hide a defect without proving the security property.
 
-- diagnosing source code without checking the public response;
-- changing a crawler-facing artifact without testing the build or final URL.
+## Definition of Done
 
-## What "Ready" Means
+A confirmed finding has:
 
-A page is technically ready when its intended public URL resolves correctly, its critical metadata is present in initial HTML, its crawl directives do not contradict intent, and internal/sitemap references point to the same canonical destination.
+- a clear trust boundary and affected asset;
+- a code/configuration location;
+- an attack narrative with realistic prerequisites;
+- a minimal, safe validation path;
+- a remediation and verification plan.
 
-Readiness is not a claim about ranking position. Search systems make their own crawl, indexing, and ranking decisions.
-
-## Recommended Team Setup
-
-- Keep app-specific commands, environments, release steps, and URL policy in `AGENTS.md`.
-- Keep the skill reusable and independent of any one framework.
-- Add a lightweight release check for sitemap URLs, `noindex`, canonical host, and representative rendered pages.
-- Treat SEO regressions as release regressions when they affect revenue, acquisition, documentation, or support surfaces.
+A fixed finding additionally has a targeted test or equivalent repeatable check.

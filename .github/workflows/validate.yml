@@ -16,4 +16,4 @@ jobs:
         run: |
           test -f SKILL.md
           head -1 SKILL.md | grep --quiet '^---$'
-          grep --quiet '^name: seo-technical-readiness$' SKILL.md
+          grep --quiet '^name: trust-the-diff-appsec-codex$' SKILL.md

@@ -1,40 +1,42 @@
-# Technical SEO Report Format
+# AppSec Report Format
 
 ```markdown
-# Technical SEO Readiness Report
+# Trust the Diff Security Review
 
-**Target:** [domain or repository]
-**Mode:** Audit | Review | Fix | Verify
-**Scope:** [pages, templates, locale, branch]
+**Target:** [repository, branch, or service]
+**Mode:** Audit | Review | Verify | Fix | Hardening
+**Scope:** [included paths, environments, assumptions]
 **Date:** [YYYY-MM-DD]
 
-## Executive Summary
+## Threat Model
 
-[Short factual summary. State important assumptions.]
+- **Assets:**
+- **Entry points:**
+- **Trust boundaries:**
+- **Security invariants:**
 
 ## Confirmed Findings
 
-### [Severity] Short title
+### [Severity] Finding title
 
-- **Evidence:** [final URL, source file, build artifact, or supplied platform data]
-- **Impact:** [user and discovery consequence]
-- **Root cause:** [known cause or "needs validation"]
-- **Recommended action:** [smallest viable change]
-- **Verification:** [command, test, or expected public response]
+- **Location:** `path/to/file.ext:line`
+- **Attack path:** [input -> missing control -> impact]
+- **Impact:** [concrete confidentiality, integrity, availability, or financial effect]
+- **Prerequisites:** [attacker capabilities]
+- **Evidence:** [code/config/test result]
+- **Safe validation:** [local/test steps]
+- **Remediation:** [root-cause fix]
+- **Verification:** [test/check]
 
-## Opportunities
+## Needs Validation
 
-[Non-blocking improvements with rationale.]
+[Candidates lacking sufficient proof.]
 
-## Intentional Exclusions or Normal States
+## Hardening Opportunities
 
-[Items inspected that should not be treated as defects.]
+[Non-vulnerability improvements and tradeoffs.]
 
-## Verification Performed
+## Checks Performed
 
-- [commands or checks]
-
-## External Processing Notes
-
-[What requires recrawl, reindexing, or third-party processing.]
+[Commands, tests, and coverage limitations.]
 ```

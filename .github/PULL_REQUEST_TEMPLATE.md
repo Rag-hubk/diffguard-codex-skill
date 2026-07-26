@@ -1,6 +1,6 @@
 ## Summary
 
-Describe the technical SEO workflow improvement.
+Describe the application security workflow improvement.
 
 ## Evidence
 
@@ -11,4 +11,4 @@ Link a reproducible scenario, public documentation, or sanitized fixture.
 - [ ] Updated relevant docs or references
 - [ ] Checked Markdown links and formatting
 - [ ] Ran `bash -n scripts/*.sh`
-- [ ] No ranking or citation guarantees added
+- [ ] No unsupported exploit claims or unsafe examples added

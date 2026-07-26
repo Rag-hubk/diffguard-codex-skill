@@ -1,5 +1,5 @@
 name: Improvement proposal
-description: Propose a focused improvement to the SEO workflow.
+description: Propose a focused improvement to the AppSec workflow.
 title: "[Proposal]: "
 labels: ["enhancement"]
 body:
@@ -7,7 +7,7 @@ body:
     id: problem
     attributes:
       label: Problem
-      description: What repeated SEO workflow problem does this solve?
+      description: What repeated application security workflow problem does this solve?
     validations:
       required: true
   - type: textarea
@@ -20,4 +20,4 @@ body:
     id: evidence
     attributes:
       label: Evidence or source
-      description: Link official framework or search documentation where relevant.
+      description: Link official security or framework documentation where relevant.
